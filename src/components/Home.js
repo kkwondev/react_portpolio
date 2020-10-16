@@ -15,6 +15,7 @@ const Main = styled.article`
     box-sizing:border-box;
     font-weight:300;
     letter-spacing: 10px;
+    color:#666;
     @media all and (min-width:200px) {
         width:100%;
         font-size:25px;

@@ -7,15 +7,15 @@ import { GrMenu } from "react-icons/gr";
 const Header = styled.header`
     width:100%;
     height:60px;
-    padding:0 30px;
+    padding:0 0 0 30px;
     box-sizing:border-box;
     position:relative;
     letter-spacing:1.5px;
     @media all and (min-width:200px) {
-        padding:0 20px;
+        padding:0 0 0 20px;
     }
     @media all and (min-width:700px) {
-        padding:0 30px;
+        padding:0 0 0 30px;
     }
 `;
 const MenuWrap = styled.ul`
