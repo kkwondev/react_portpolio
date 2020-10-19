@@ -102,6 +102,7 @@ const MoblieMenus = styled.li`
 function Menu() {
     const Ready = () => {
         alert("준비중입니다.");
+        setOpen(false);
     }
     const [open,setOpen] = useState(false);
     console.debug(open);
