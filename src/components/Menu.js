@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Home from './Home';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import { Route,Link } from 'react-router-dom';
 import Introduction from './Introduction';
 import { GrMenu } from "react-icons/gr";
@@ -12,7 +12,7 @@ const Header = styled.header`
     position:relative;
     letter-spacing:1.5px;
     @media all and (min-width:200px) {
-        padding:0 0 0 20px;
+        padding:0 20px 0 20px;
     }
     @media all and (min-width:700px) {
         padding:0 0 0 30px;
@@ -27,12 +27,22 @@ const MenuWrap = styled.ul`
 `;
 const MoMenuWrap = styled.ul`
     width:100%;
-    height:60px;
+    height:120px;
     text-transform:uppercase;
     letter-spacing:1.5px;
     color:#666;
     position:absolute;
+    top:-100%;
     z-index:999;
+    transition:all 0.3s;
+    opacity:0;
+    ${props =>
+    props.open &&
+    css`
+       top:60px;
+       opacity:1;
+    `
+    }
 `;
 const Logo = styled.h1`
     float: left;
@@ -77,6 +87,7 @@ const Hambuger = styled.div`
 `;
 const MoblieMenus = styled.li`
     width:100%;
+    display:block;
     height:60px;
     line-height:60px;
     text-align:center;
@@ -85,12 +96,7 @@ const MoblieMenus = styled.li`
     text-transform:uppercase;
     letter-spacing:2px;
     border-bottom:1px solid #666;
-    transition:all 0.3s;
     cursor: pointer;
-    &:hover {
-        background-color:#666;
-        color:#fff;
-    }
 `;
 
 function Menu() {
@@ -120,14 +126,12 @@ function Menu() {
                 </Hambuger>
         </MenuWrap>
         </Header>
-        { open &&(
         <MoMenuWrap open={open}>
-            <MoblieMenus onClick={Ready}>introduction</MoblieMenus>
-            <MoblieMenus onClick={Ready}>Portpolio</MoblieMenus>
+            <MoblieMenus onClick={Ready} open={open}>introduction</MoblieMenus>
+            <MoblieMenus onClick={Ready} open={open}>Portpolio</MoblieMenus>
         </MoMenuWrap>
-         )}
         <Route path="/" exact={true} component={Home}/>
-        <Route path="/intro" exact={true} component={Introduction}/>
+        <Route path="/intro" component={Introduction}/>
         </>
     );
 }

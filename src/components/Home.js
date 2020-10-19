@@ -1,10 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 const MainWrap =styled.section`
     clear: both;
     width:100%;
     height:90vh;
     position:relative;
+`;
+const TypeAnimations = keyframes`
+    0% {
+        opacity:0;
+        top:50%;
+    }
+    100% {
+        opacity:1;
+        top:52%;
+    }
 `;
 const Main = styled.article`
     position:absolute;
@@ -16,6 +26,7 @@ const Main = styled.article`
     font-weight:300;
     letter-spacing: 10px;
     color:#666;
+    animation: ${TypeAnimations} 1.5s infinite linear alternate;
     @media all and (min-width:200px) {
         width:100%;
         font-size:25px;
