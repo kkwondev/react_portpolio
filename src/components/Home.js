@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 const MainWrap =styled.section`
     clear: both;
     width:100%;
-    height:90vh;
+    height:80vh;
     position:relative;
 `;
 const TypeAnimations = keyframes`
