@@ -4,9 +4,10 @@ import { AiFillGithub,AiFillFacebook } from "react-icons/ai";
 import { RiKakaoTalkFill } from "react-icons/ri";
 
 const FooterWrap = styled.footer`
+    clear:both;
     width:100%;
     height:100px;
-    padding:20px 0;
+    padding:15px 0;
     box-sizing:border-box;
     font-size:12px;
     color:#666;

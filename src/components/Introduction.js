@@ -5,6 +5,7 @@ import ListCareer from './ListCareer';
 
 const Introwrap = styled.section`
   width:80%;
+  height:90vh;
   margin:0 auto;
   padding:100px 0 50px 0;
   box-sizing:border-box;

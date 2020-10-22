@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 const MainWrap =styled.section`
     clear: both;
     width:100%;
-    height:100vh;
+    height:90vh;
     position:relative;
     padding-top:60px;
     box-sizing:border-box;
