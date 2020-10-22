@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled, { keyframes } from 'styled-components';
+import axios from "axios";
+
 const MainWrap =styled.section`
     clear: both;
     width:100%;
@@ -41,7 +43,32 @@ const Main = styled.article`
         font-size:50px;
     }
 `;
+
+
+
+// const instance = axios.create({
+//     // baseURL : 'https://domain.com/api/',
+//     timeout: 1000,
+//     headers: {"Access-Control-Allow-Origin": "*"}
+// });
+
+
 function Home () {
+    // useEffect(() => {
+    //     const loadItem = async () => {
+    //         instance.post('http://localhost:3001/login', {
+    //             "email" : "test@test.com",
+    //             "password": "1212"
+    //         })
+    //         .then(function (response) {
+    //             console.log(response);
+    //         })
+    //         .catch(function (error) {
+    //             console.log(error);
+    //         });
+    //       };
+    //       loadItem();
+    // },[])
     return(
         <MainWrap>
             <Main>
