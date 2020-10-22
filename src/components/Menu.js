@@ -129,7 +129,7 @@ function Menu() {
         </Header>
         <MoMenuWrap open={open}>
             <MoblieMenus open={open}>
-                <Link to="/intro" className="logo_title">introduction</Link>
+                <Link to="/intro" className="logo_title" onClick={openMenu}>introduction</Link>
                 </MoblieMenus>
             <MoblieMenus onClick={Ready} open={open}>Portpolio</MoblieMenus>
         </MoMenuWrap>
