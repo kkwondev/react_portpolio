@@ -28,6 +28,7 @@ const MenuWrap = styled.ul`
 const MoMenuWrap = styled.ul`
     width:100%;
     height:120px;
+    background-color:#fff;
     text-transform:uppercase;
     letter-spacing:1.5px;
     color:#666;
@@ -118,9 +119,8 @@ function Menu() {
             </Logo>
         <MenuWrap>
             <Menus onClick={Ready}>Portpolio</Menus>
-            <Menus onClick={Ready}>
-                introduction
-                {/* <Link to="/intro" className="logo_title">introduction</Link> */}
+            <Menus>
+                <Link to="/intro" className="logo_title">introduction</Link>
                 </Menus>
                 <Hambuger>
                     <GrMenu onClick={openMenu}/>
@@ -128,7 +128,9 @@ function Menu() {
         </MenuWrap>
         </Header>
         <MoMenuWrap open={open}>
-            <MoblieMenus onClick={Ready} open={open}>introduction</MoblieMenus>
+            <MoblieMenus open={open}>
+                <Link to="/intro" className="logo_title">introduction</Link>
+                </MoblieMenus>
             <MoblieMenus onClick={Ready} open={open}>Portpolio</MoblieMenus>
         </MoMenuWrap>
         <Route path="/" exact={true} component={Home}/>
