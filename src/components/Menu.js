@@ -4,6 +4,7 @@ import styled, {css} from 'styled-components';
 import { Route,Link } from 'react-router-dom';
 import Introduction from './Introduction';
 import { GrMenu } from "react-icons/gr";
+import Portpolio from './Portpolio';
 const Header = styled.header`
     width:100%;
     height:60px;
@@ -103,10 +104,6 @@ const MoblieMenus = styled.li`
 `;
 
 function Menu() {
-    const Ready = () => {
-        alert("준비중입니다.");
-        setOpen(false);
-    }
     const [open,setOpen] = useState(false);
     console.debug(open);
     const openMenu = () => {
@@ -115,12 +112,15 @@ function Menu() {
     
     return(
         <>
+        {/* PC 헤더 */}
         <Header>
             <Logo>
                 <Link to="/" className="logo_title">kkwon dev</Link>
             </Logo>
         <MenuWrap>
-            <Menus onClick={Ready}>Portpolio</Menus>
+            <Menus>
+                <Link to="/portpolio" className="logo_title">portpolio</Link>
+            </Menus>
             <Menus>
                 <Link to="/intro" className="logo_title">introduction</Link>
                 </Menus>
@@ -129,14 +129,19 @@ function Menu() {
                 </Hambuger>
         </MenuWrap>
         </Header>
+        {/* 모바일 헤더 */}
         <MoMenuWrap open={open}>
             <MoblieMenus open={open}>
                 <Link to="/intro" className="logo_title" onClick={openMenu}>introduction</Link>
                 </MoblieMenus>
-            <MoblieMenus onClick={Ready} open={open}>Portpolio</MoblieMenus>
+            <MoblieMenus open={open}>
+            <Link to="/portpolio" className="logo_title" onClick={openMenu}>portpolio</Link>
+                </MoblieMenus>
         </MoMenuWrap>
+        {/* 라우터 */}
         <Route path="/" exact={true} component={Home}/>
         <Route path="/intro" component={Introduction}/>
+        <Route path="/portpolio" component={Portpolio}/>
         </>
     );
 }
