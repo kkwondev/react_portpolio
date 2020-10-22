@@ -5,24 +5,25 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 
 const FooterWrap = styled.footer`
     width:100%;
-    height:10vh;
+    height:100px;
+    padding:20px 0;
+    box-sizing:border-box;
     font-size:12px;
     color:#666;
-    position:absolute;
-    bottom:20px;
     text-align:center;
     text-transform:uppercase;
 `;
 const SnsLink = styled.article`
     width:100%;
+    height:30px;
     margin: 0 auto;
-    margin-bottom:5px;
+    margin-bottom:10px;
 
 `;
 const SNS = {
     cursor :"pointer",
     marginRight:10,
-    fontSize:32
+    fontSize:32,
 }
 const SNSAtag = styled.a `
     color:#666;
@@ -36,10 +37,16 @@ function Footer() {
             <SNSAtag 
             href="https://github.com/kkwondev/"
             target="_blank">
-                <AiFillGithub style={SNS}/>
+            <AiFillGithub style={SNS}/>
             </SNSAtag>
+            <SNSAtag href="https://github.com/kkwondev/"
+            target="_blank">
             <AiFillFacebook style={SNS}/>
+            </SNSAtag>
+            <SNSAtag href="https://github.com/kkwondev/"
+            target="_blank">
             <RiKakaoTalkFill style={SNS} cursor="pointer"/>
+            </SNSAtag>
         </SnsLink>
             copylight © kangkyoungwon.
         </FooterWrap>

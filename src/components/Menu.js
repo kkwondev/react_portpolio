@@ -8,8 +8,10 @@ const Header = styled.header`
     width:100%;
     height:60px;
     padding:0 0 0 30px;
+    background-color:#fff;
     box-sizing:border-box;
-    position:relative;
+    position:fixed;
+    z-index: 1000;
     letter-spacing:1.5px;
     @media all and (min-width:200px) {
         padding:0 20px 0 20px;
@@ -32,7 +34,7 @@ const MoMenuWrap = styled.ul`
     text-transform:uppercase;
     letter-spacing:1.5px;
     color:#666;
-    position:absolute;
+    position:fixed;
     top:-100%;
     z-index:999;
     transition:all 0.3s;

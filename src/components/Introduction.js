@@ -6,7 +6,7 @@ import ListCareer from './ListCareer';
 const Introwrap = styled.section`
   width:80%;
   margin:0 auto;
-  padding:50px 0px;
+  padding:100px 0 50px 0;
   box-sizing:border-box;
 `;
 const ImgMe = styled.article`
@@ -30,7 +30,7 @@ const Introtext = styled.article`
 `;
 const Information = styled.article`
   width:100%;
-  height:200px;
+  height:245px;
   text-align:center;
   padding:10px;
   box-sizing:border-box;
@@ -38,16 +38,23 @@ const Information = styled.article`
   letter-spacing:-1.5px;
 `;
 const Career = styled.article`
-  width:50%;
+  width:48%;
   float: left;
+  margin-right:2%;
 `;
 const Skils = styled.article`
-  width:50%;
+  width:48%;
   float: left;
 
   `;
   const Title = {
-    marginBottom : 20
+    letterSpacing : '5px',
+    fontSize : 20,
+    padding: '15px 0',
+    boxSizing : 'border-box',
+    textAlign: 'center',
+    marginBottom : 20,
+    borderBottom : '2px solid #666'
   }
 function Introduction () {
     return (
@@ -63,8 +70,8 @@ function Introduction () {
           <ListCareer/>
           </Career>
           <Skils>
-           <h2 style={Title}>SKILS</h2>
-           <p>HTML CSS JAVASCRIPT REACT</p>
+           <h2 style={Title}>SKILLS</h2>
+           <p>HTML, CSS, JAVASCRIPT, REACT</p>
           </Skils>
         </Information>
       </Introwrap>

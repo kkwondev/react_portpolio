@@ -3,8 +3,10 @@ import styled, { keyframes } from 'styled-components';
 const MainWrap =styled.section`
     clear: both;
     width:100%;
-    height:80vh;
+    height:100vh;
     position:relative;
+    padding-top:60px;
+    box-sizing:border-box;
 `;
 const TypeAnimations = keyframes`
     0% {

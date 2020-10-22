@@ -5,6 +5,7 @@ const Wrap = styled.div`
     margin-bottom:20px;
     line-height:23px;
     padding:5px 0;
+    box-sizing:border-box;
 `;
 function Career({Careers}) {
     return(
