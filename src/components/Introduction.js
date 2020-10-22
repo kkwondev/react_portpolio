@@ -41,11 +41,22 @@ const Information = styled.article`
 const Career = styled.article`
   width:48%;
   float: left;
-  margin-right:2%;
+  @media all and (min-width:200px) {
+      width:100%;
+    }
+  @media all and (min-width:600px) {
+      width:48%;
+      margin-right:2%;
+    }
 `;
 const Skils = styled.article`
-  width:48%;
   float: left;
+  @media all and (min-width:200px) {
+      width:100%;
+    }
+  @media all and (min-width:600px) {
+      width:48%;
+    }
 
   `;
   const Title = {

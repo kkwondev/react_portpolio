@@ -102,14 +102,17 @@ const MoblieMenus = styled.li`
     border-bottom:1px solid #666;
     cursor: pointer;
 `;
-
+const ALink = {
+    width : '100%',
+    height: '100%',
+    display: 'block',
+    color: '#666'
+}
 function Menu() {
     const [open,setOpen] = useState(false);
-    console.debug(open);
     const openMenu = () => {
         setOpen(!open)
     }
-    
     return(
         <>
         {/* PC 헤더 */}
@@ -132,10 +135,10 @@ function Menu() {
         {/* 모바일 헤더 */}
         <MoMenuWrap open={open}>
             <MoblieMenus open={open}>
-                <Link to="/intro" className="logo_title" onClick={openMenu}>introduction</Link>
+                <Link to="/intro" style={ALink} onClick={openMenu}>introduction</Link>
                 </MoblieMenus>
             <MoblieMenus open={open}>
-            <Link to="/portpolio" className="logo_title" onClick={openMenu}>portpolio</Link>
+            <Link to="/portpolio" style={ALink} onClick={openMenu}>portpolio</Link>
                 </MoblieMenus>
         </MoMenuWrap>
         {/* 라우터 */}

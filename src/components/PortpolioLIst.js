@@ -5,6 +5,7 @@ import Polic from '../img/polic-mockup2.png';
 import Han from '../img/han-Mockup2.png';
 import BangBang from '../img/bangbang-mockup2.png';
 import StudyCode from '../img/study_code_mokup2.png';
+import { Link } from 'react-router-dom';
 
 const Popols = styled.div`
     text-align:center;
@@ -61,8 +62,8 @@ const Imgstyle = styled.img `
 function PP ({popol}) {
     return(
     <Popols>
-        <a
-        href={popol.href}
+        <Link 
+        to={popol.href}
         target='_blank'
         >
         
@@ -70,7 +71,7 @@ function PP ({popol}) {
             src={popol.img} 
             alt={popol.name}/>
             <PopolP color = {popol.color}>{popol.name}</PopolP>
-        </a>
+        </Link>
     </Popols>
     );
 }
